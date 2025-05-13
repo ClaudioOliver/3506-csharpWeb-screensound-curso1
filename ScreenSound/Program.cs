@@ -3,9 +3,8 @@ using ScreenSound.Menus;
 using ScreenSound.Modelos;
 
 var context = new ScreenSoundContext();
-var artistaDAL = new ArtistaDAL(context);
-
-var musicaDAL = new MusicaDAL(context);
+var artistaDAL = new DAL<Artista>(context);
+var musicaDAL = new DAL<Musica>(context);
 
 var musicaNova = new Musica("Zero") {Id = 1};
 var musicaNova2 = new Musica("Girassol editada") {Id = 2};
